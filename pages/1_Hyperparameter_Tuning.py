@@ -82,3 +82,4 @@ if st.button("🔄 Retrain Model with Selected Parameters"):
     fig, ax = plt.subplots(figsize=(8, 6))
     sns.barplot(x=importances, y=X.columns, ax=ax)
     st.pyplot(fig)
+
