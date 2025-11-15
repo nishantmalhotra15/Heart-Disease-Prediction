@@ -8,7 +8,7 @@ scaler = pickle.load(open("scaler.pkl", "rb"))
 
 st.set_page_config(
     page_title="Heart Disease App",
-    page_icon="❤️",
+    page_icon="🫀",
     layout="centered",
     menu_items={
         'about': "Heart Disease Prediction App – by Hexacore Team"
@@ -16,7 +16,7 @@ st.set_page_config(
 )
 
 
-st.title("❤️ Heart Disease Prediction App")
+st.title("🫀 Heart Disease Prediction App")
 st.write("Enter patient details below and click Predict to check heart disease risk.")
 
 # ---------- USER INPUTS ----------
