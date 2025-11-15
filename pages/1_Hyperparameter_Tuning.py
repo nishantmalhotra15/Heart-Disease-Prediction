@@ -81,5 +81,10 @@ if st.button("🔄 Retrain Model with Selected Parameters"):
 
     fig, ax = plt.subplots(figsize=(8, 6))
     sns.barplot(x=importances, y=X.columns, ax=ax)
+
+    ax.set_ylabel("")  # FIX: Remove the 'None' label
+    ax.set_xlabel("Feature Importance")
+    fig.tight_layout()
+    
     st.pyplot(fig)
 
