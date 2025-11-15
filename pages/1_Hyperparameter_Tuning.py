@@ -39,7 +39,7 @@ with col1:
     min_leaf = st.slider("Min Samples Leaf", 1, 20, 1)
 
 with col2:
-    max_feat = st.selectbox("Max Features", ["auto", "sqrt", "log2"])
+    max_feat = st.selectbox("Max Features", ["sqrt", "log2"])
     criterion = st.selectbox("Criterion", ["gini", "entropy", "log_loss"])
     bootstrap = st.selectbox("Bootstrap Sampling", [True, False])
 
