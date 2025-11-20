@@ -9,15 +9,6 @@ Along with the prediction model, an **interactive Streamlit web app** and a **Hy
 
 ---
 
-##  **Project Highlights**
-
-✔ Random Forest classifier trained from scratch
-✔ Complete ML pipeline: EDA → Preprocessing → Model Building → Hyperparameter Tuning → Evaluation
-✔ Streamlit web app for **real-time prediction**
-✔ Additional page for **live hyperparameter tuning**
-✔ Model & scaler saved using pickle
-✔ Clean and interpretable visualizations
-
 ---
 
 ##  **Project Structure**
