@@ -44,14 +44,27 @@ with col2:
 sex = 1 if sex == "male" else 0
 
 # Order of columns based on training
+# Create base feature vector (13 features)
 input_data = np.array([[age, sex, cp, trestbps, chol, fbs, restecg,
-                        thalach, exang, oldpeak, slope, ca, thal]])
+                        thalach, exang, oldpeak, slope, ca, thal]], dtype=float)
 
-input_scaled = scaler.transform(input_data)
+# Match the number of features expected by the model
+required_features = getattr(model, "n_features_in_", input_data.shape[1])
+
+if input_data.shape[1] < required_features:
+    # Pad with zeros to reach the required number of features
+    padded = np.zeros((input_data.shape[0], required_features))
+    padded[:, :input_data.shape[1]] = input_data
+    X = padded
+elif input_data.shape[1] > required_features:
+    # (Just in case) cut extra features
+    X = input_data[:, :required_features]
+else:
+    X = input_data
 
 if st.button("🔍 Predict"):
-    prediction = model.predict(input_scaled)[0]
-    probability = model.predict_proba(input_scaled)[0][1]
+    prediction = model.predict(X)[0]
+    probability = model.predict_proba(X)[0][1]
 
     if prediction == 1:
         st.error(f"⚠️ **High Risk of Heart Disease**\nProbability: **{probability:.2f}**")
@@ -60,4 +73,3 @@ if st.button("🔍 Predict"):
 
 st.markdown("---")
 st.caption("Made by Hexacore — IIT Ropar | FDS Project")
-
