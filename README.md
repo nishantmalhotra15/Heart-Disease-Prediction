@@ -7,8 +7,6 @@ Along with the prediction model, an **interactive Streamlit web app** and a **Hy
 
 ---
 
----
-
 ##  **Project Structure**
 
 ```
