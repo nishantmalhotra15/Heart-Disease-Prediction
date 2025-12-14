@@ -2,8 +2,6 @@
 
 #  Heart Disease Prediction using Random Forest
 
-### *FDS Project – IIT Ropar (Group 32)*
-
 This project builds a **Machine Learning model** to predict the likelihood of heart disease using the **Cleveland Heart Disease Dataset**.
 Along with the prediction model, an **interactive Streamlit web app** and a **Hyperparameter Tuning dashboard** are developed for real-time experimentation.
 
@@ -49,13 +47,6 @@ streamlit run app.py
 This opens:
 ✔ Main prediction page
 ✔ Sidebar with **Hyperparameter Tuning** page
-
----
-
-## 🌐 **Streamlit Cloud Deployment**
-
-The app can be deployed at
-`https://hexacore.streamlit.app/`
 
 ---
 
